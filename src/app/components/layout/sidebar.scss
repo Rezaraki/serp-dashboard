@@ -1,0 +1,75 @@
+.sidebar {
+  min-width: 288px;
+  max-width: 288px;
+  background-color: #101924;
+  min-height: 100dvh;
+  max-height: 100dvh;
+  overflow: auto;
+
+  /* width */
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  > .title {
+    background-color: #101924;
+    color: #8B9BFF;
+    border-bottom: 1px solid #1A283A;
+    padding: 0 22px;
+    margin-bottom: 26px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    height: 72px;
+    > img {
+      width: 112px;
+      height: 55px;
+    }
+  }
+
+  > .sidebar-item {
+    margin-bottom: 46px;
+    padding: 0 22px;
+
+    > .title {
+      color: #B7C2D0;
+      font-size: 11px;
+      margin-bottom: 16px;
+    }
+
+    > .sidebar-child {
+      color: #6E82A5;
+      font-size: 15px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+
+      > .material-icons {
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+
+      &.is-active {
+        color: #6576FF;
+      }
+    }
+  }
+}

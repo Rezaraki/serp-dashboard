@@ -1,0 +1,38 @@
+/*@import "bootstrap";*/
+
+.font-yekan-bakh {
+    font-family: var(--font-yekan-bakh), var(--font-family-sans-serif);
+}
+
+.font-vazir {
+    font-family: var(--font-vazir), var(--font-family-sans-serif);
+}
+
+.font-vazir-fa {
+    font-family: var(--font-vazir-fa), var(--font-family-sans-serif);
+}
+
+main {
+    min-height: calc(100dvh - 72px);
+    max-height: calc(100dvh - 72px);
+    overflow: auto;
+    background-color: #F5F6FA;
+    padding: 40px;
+
+    /* width */
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+}

@@ -1,0 +1,37 @@
+.data-table-custom-title {
+  color: #364A63;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+// override
+table.dataTable.table {
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: #fff;
+  overflow: hidden;
+
+  th {
+    background-color: #F5F6FA;
+    font-size: 15px;
+    font-weight: 700;
+    white-space: nowrap;
+    border-top: none;
+    border-bottom-width: 1px;
+  }
+
+  td {
+    font-size: 17px;
+    font-weight: 300;
+  }
+
+  td, th {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #3C5471;
+  }
+}

@@ -1,0 +1,21 @@
+.app-header {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: flex-end;
+  background-color: #fff;
+  border-bottom: 1px solid #E5E7F0;
+  width: 100%;
+  padding: 0 16px;
+  font-size: 15px;
+  font-weight: 600;
+
+  > .name {
+    color: #6576FF;
+  }
+
+  > .exit {
+    color: #999;
+  }
+}
