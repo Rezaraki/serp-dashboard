@@ -1,4 +1,5 @@
 import { ResponsiveBar } from "@nivo/bar";
+import { Block } from "../../shared/Block";
 import "./BarChartBlock.scss";
 type Props = {};
 const languages = {
@@ -14,9 +15,8 @@ const data = [
 
 const BarChartBlock = (props: Props) => {
   return (
-    <div className="bar-chart-block">
-      <h2>{languages.heading}</h2>
-      <div style={{ width: "100%", height: "400px" }}>
+    <Block heading={languages.heading}>
+      <div className="bar-chart-block">
         <ResponsiveBar
           data={data}
           keys={["value"]}
@@ -52,9 +52,9 @@ const BarChartBlock = (props: Props) => {
             // Reset the color of the hovered bar to the default purple
             (event.target as HTMLElement).style.fill = "#8C9BFF";
           }}
-        />{" "}
+        />
       </div>
-    </div>
+    </Block>
   );
 };
 export default BarChartBlock;
