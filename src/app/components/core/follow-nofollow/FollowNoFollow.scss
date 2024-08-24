@@ -1,0 +1,26 @@
+.follow-nofollow__container {
+  height: 169px;
+  position: relative;
+}
+.follow-nofollow__chart-container {
+  width: 50%;
+  position: absolute;
+  left: -55px;
+  top: -55px;
+}
+.follow-nofollow__extras-container {
+  padding-inline-start: 2.5rem;
+  width: 50%;
+  > div {
+    display: flex;
+    justify-content: space-between;
+    margin-block: 20px;
+  }
+  strong {
+    font-size: larger;
+    color: #7c788c;
+  }
+  span {
+    color: #3c5471;
+  }
+}

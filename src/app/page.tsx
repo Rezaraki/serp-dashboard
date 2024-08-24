@@ -4,6 +4,7 @@ import BarChartBlock from "./components/core/bar-chart-block/BarChartBlock";
 import { MostVisited } from "./components/core/most-visited/MostVisited";
 import "./page.scss";
 import { LinkType } from "./components/core/link-type/LinkType";
+import { FollowNoFollow } from "./components/core/follow-nofollow/FollowNoFollow";
 
 const MostVisitedData = [
   { address: "sdfkgjh", percent: 10 },
@@ -53,7 +54,7 @@ export default function Home() {
           </div>
           <div className="col pr-0 mb-3">
             <div className="p-3 border bg-light">
-              <MostVisited data={MostVisitedData} />
+              <FollowNoFollow follow={142344} noFollow={14234} />
             </div>
           </div>
         </div>
