@@ -1,0 +1,24 @@
+.keywod-table__serp-feature {
+  display: inline-block;
+  background: #d9d9d9;
+  padding: 5px;
+  min-width: 2rem;
+  text-align: center;
+  color: black;
+}
+.keywod-table__key-dif {
+  display: inline-block;
+  padding: 5px;
+  min-width: 2rem;
+  text-align: center;
+  color: black;
+  &.red {
+    background: #ff3e3e;
+  }
+  &.yellow {
+    background: #ffea7e;
+  }
+  &.green {
+    background: #009f79;
+  }
+}

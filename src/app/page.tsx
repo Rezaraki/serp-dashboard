@@ -1,10 +1,11 @@
 "use client";
 import ReactDataTable from "@/app/components/core/ReactDataTable";
 import BarChartBlock from "./components/core/bar-chart-block/BarChartBlock";
+import { FollowNoFollow } from "./components/core/follow-nofollow/FollowNoFollow";
+import { KeywordTable } from "./components/core/keyword-table/KeywordTable";
+import { LinkType } from "./components/core/link-type/LinkType";
 import { MostVisited } from "./components/core/most-visited/MostVisited";
 import "./page.scss";
-import { LinkType } from "./components/core/link-type/LinkType";
-import { FollowNoFollow } from "./components/core/follow-nofollow/FollowNoFollow";
 
 const MostVisitedData = [
   { address: "sdfkgjh", percent: 10 },
@@ -17,6 +18,72 @@ const MostVisitedData = [
   { address: "sdfkgjh", percent: 10 },
   { address: "sdfkgjh", percent: 10 },
   { address: "sdfkgjh", percent: 10 },
+];
+const KeywordTableData = [
+  {
+    keyword: "keyword",
+    change: 431,
+    change_amount: 431,
+    impression: 431,
+    serp_features: 431,
+    keyword_dificulty: 9,
+  },
+  {
+    keyword: "keyword2",
+    change: 41,
+    change_amount: 4131,
+    impression: 31,
+    serp_features: 41,
+    keyword_dificulty: 1,
+  },
+  {
+    keyword: "keyword",
+    change: 431,
+    change_amount: 431,
+    impression: 431,
+    serp_features: 431,
+    keyword_dificulty: 9,
+  },
+  {
+    keyword: "keyword2",
+    change: 41,
+    change_amount: 4131,
+    impression: 31,
+    serp_features: 41,
+    keyword_dificulty: 1,
+  },
+  {
+    keyword: "keyword",
+    change: 431,
+    change_amount: 431,
+    impression: 431,
+    serp_features: 431,
+    keyword_dificulty: 9,
+  },
+  {
+    keyword: "keyword2",
+    change: 41,
+    change_amount: 4131,
+    impression: 31,
+    serp_features: 41,
+    keyword_dificulty: 1,
+  },
+  {
+    keyword: "keyword",
+    change: 431,
+    change_amount: 431,
+    impression: 431,
+    serp_features: 431,
+    keyword_dificulty: 9,
+  },
+  {
+    keyword: "keyword2",
+    change: 41,
+    change_amount: 4131,
+    impression: 31,
+    serp_features: 41,
+    keyword_dificulty: 1,
+  },
 ];
 export default function Home() {
   return (
@@ -55,6 +122,14 @@ export default function Home() {
           <div className="col pr-0 mb-3">
             <div className="p-3 border bg-light">
               <FollowNoFollow follow={142344} noFollow={14234} />
+            </div>
+          </div>
+        </div>
+
+        <div className="row">
+          <div className="col p-0 mb-3">
+            <div className="p-3 border bg-light">
+              <KeywordTable data={KeywordTableData} />
             </div>
           </div>
         </div>
