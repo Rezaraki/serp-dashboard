@@ -6,11 +6,11 @@ const languages = {
   heading: "تقسیم رتبه ها در SERP",
 };
 const data = [
-  { id: "A", value: 8 },
-  { id: "B", value: 12 },
-  { id: "C", value: 18 },
-  { id: "D", value: 38 },
-  { id: "E", value: 48 },
+  { id: "1-3", value: 8 },
+  { id: "4-10", value: 12 },
+  { id: "11-20", value: 18 },
+  { id: "21-50", value: 38 },
+  { id: "50-100", value: 48 },
 ];
 
 const BarChartBlock = (props: Props) => {
