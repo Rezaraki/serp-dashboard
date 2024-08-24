@@ -3,11 +3,12 @@ import "./Block.scss";
 
 type Props = {
   heading: string;
+  className?: string;
   children: ReactNode;
 };
-export const Block = ({ heading, children }: Props) => {
+export const Block = ({ heading, children, className }: Props) => {
   return (
-    <div className={`block__container`}>
+    <div className={`block__container ${className}`}>
       <h2>{heading}</h2>
       {children}
     </div>

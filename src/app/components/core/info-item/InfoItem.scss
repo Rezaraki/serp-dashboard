@@ -1,0 +1,11 @@
+.info-item__wrapper.block__container {
+  & > h2 {
+    padding-inline-start: unset;
+    margin-bottom: 2rem;
+  }
+  height: 115px;
+}
+.info-item__progress {
+  margin-top: 2rem;
+  color: #707a9c;
+}

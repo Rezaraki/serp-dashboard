@@ -2,6 +2,7 @@
 import ReactDataTable from "@/app/components/core/ReactDataTable";
 import BarChartBlock from "./components/core/bar-chart-block/BarChartBlock";
 import { FollowNoFollow } from "./components/core/follow-nofollow/FollowNoFollow";
+import { InfoItem } from "./components/core/info-item/InfoItem";
 import { KeywordTable } from "./components/core/keyword-table/KeywordTable";
 import { LinkType } from "./components/core/link-type/LinkType";
 import { MostVisited } from "./components/core/most-visited/MostVisited";
@@ -39,6 +40,22 @@ const KeywordTableData = [
   {
     keyword: "keyword",
     change: 431,
+    change_amount: -431,
+    impression: 431,
+    serp_features: 431,
+    keyword_dificulty: 9,
+  },
+  {
+    keyword: "keyword2",
+    change: 41,
+    change_amount: -31,
+    impression: 31,
+    serp_features: 41,
+    keyword_dificulty: 1,
+  },
+  {
+    keyword: "keyword",
+    change: 431,
     change_amount: 431,
     impression: 431,
     serp_features: 431,
@@ -47,7 +64,7 @@ const KeywordTableData = [
   {
     keyword: "keyword2",
     change: 41,
-    change_amount: 4131,
+    change_amount: -131,
     impression: 31,
     serp_features: 41,
     keyword_dificulty: 1,
@@ -68,22 +85,12 @@ const KeywordTableData = [
     serp_features: 41,
     keyword_dificulty: 1,
   },
-  {
-    keyword: "keyword",
-    change: 431,
-    change_amount: 431,
-    impression: 431,
-    serp_features: 431,
-    keyword_dificulty: 9,
-  },
-  {
-    keyword: "keyword2",
-    change: 41,
-    change_amount: 4131,
-    impression: 31,
-    serp_features: 41,
-    keyword_dificulty: 1,
-  },
+];
+const InfoData = [
+  { heading: "Readability Score", progress: 25 },
+  { heading: "Lexical Richness", progress: 25 },
+  { heading: "Semantic Similarity Score", progress: 35 },
+  { heading: "Keyword Coverage Score", progress: 7 },
 ];
 export default function Home() {
   return (
@@ -132,6 +139,16 @@ export default function Home() {
               <KeywordTable data={KeywordTableData} />
             </div>
           </div>
+        </div>
+
+        <div className="row">
+          {InfoData.map((info, i) => (
+            <div className="col mb-3" key={i}>
+              <div className="p-3 border bg-light">
+                <InfoItem heading={info.heading} progresss={info.progress} />
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
