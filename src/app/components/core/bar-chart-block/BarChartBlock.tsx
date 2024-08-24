@@ -1,19 +1,21 @@
 import { ResponsiveBar } from "@nivo/bar";
 import { Block } from "../../shared/Block";
 import "./BarChartBlock.scss";
-type Props = {};
+
+type DataPoint = {
+  id: string;
+  value: number;
+};
+
+type Props = {
+  data: DataPoint[];
+};
+
 const languages = {
   heading: "تقسیم رتبه ها در SERP",
 };
-const data = [
-  { id: "1-3", value: 8 },
-  { id: "4-10", value: 12 },
-  { id: "11-20", value: 18 },
-  { id: "21-50", value: 38 },
-  { id: "50-100", value: 48 },
-];
 
-const BarChartBlock = (props: Props) => {
+const BarChartBlock = ({ data }: Props) => {
   return (
     <Block heading={languages.heading}>
       <div className="bar-chart-block">
@@ -23,7 +25,7 @@ const BarChartBlock = (props: Props) => {
           indexBy="id"
           margin={{ top: 20, right: 30, bottom: 50, left: 60 }}
           padding={0.3}
-          colors={"#8C9BFF"} // Set the default color to purple
+          colors={"#8C9BFF"}
           borderColor={{ from: "color", modifiers: [["darker", 1.6]] }}
           axisTop={null}
           axisRight={null}
@@ -35,21 +37,17 @@ const BarChartBlock = (props: Props) => {
           axisLeft={null}
           enableGridX={false}
           enableGridY={false}
-          label={(d) => String(d.value)} // Convert the value to a string
+          label={({ value }) => `${value}%`}
           labelSkipWidth={12}
           labelSkipHeight={12}
-          labelTextColor={{ from: "color", modifiers: [["darker", 1.6]] }}
+          labelTextColor="#FFFFFF"
           animate={true}
-          borderRadius={5} // Adjust the value as needed for the desired roundness
-          onClick={(data, event) => {
-            // Handle click event
-          }}
+          borderRadius={5}
+          onClick={(data, event) => {}}
           onMouseEnter={(data, event) => {
-            // Change the color of the hovered bar to red
             (event.target as HTMLElement).style.fill = "#6577FF";
           }}
           onMouseLeave={(data, event) => {
-            // Reset the color of the hovered bar to the default purple
             (event.target as HTMLElement).style.fill = "#8C9BFF";
           }}
         />
@@ -57,4 +55,5 @@ const BarChartBlock = (props: Props) => {
     </Block>
   );
 };
+
 export default BarChartBlock;

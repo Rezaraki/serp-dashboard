@@ -9,6 +9,7 @@ import {
   TableRow,
 } from "@mui/material";
 import { Block } from "../../shared/Block";
+import { Change } from "../../shared/change/Change";
 import "./KeywordTable.scss";
 
 const languages = {
@@ -95,10 +96,7 @@ export const KeywordTable = ({ data }: Props) => {
           <TableBody>
             {data?.slice(0, 9).map((data, i) => (
               <TableRow key={i}>
-                <StyledTableCell>
-                  {data.keyword} {data.change_amount}
-                  {data.change_amount > 0 ? "+" : "-"}
-                </StyledTableCell>
+                <StyledTableCell>{data.keyword}</StyledTableCell>
                 <StyledTableCell>
                   <span
                     className={`keywod-table__key-dif ${getKeywordDifficultyClass(
@@ -114,7 +112,9 @@ export const KeywordTable = ({ data }: Props) => {
                   </span>
                 </StyledTableCell>
                 <StyledTableCell>{data.impression}</StyledTableCell>
-                <StyledTableCell>{data.change}</StyledTableCell>
+                <StyledTableCell>
+                  <Change percent={data.change_amount} /> {data.change}
+                </StyledTableCell>
               </TableRow>
             ))}
           </TableBody>

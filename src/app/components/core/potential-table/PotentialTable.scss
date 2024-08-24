@@ -1,0 +1,26 @@
+.potential-table {
+  thead tr th {
+    border-top: 1px solid #dbdfea;
+    border-bottom: 1px solid #dbdfea;
+    &.imp50 {
+      text-align: end;
+      span {
+        display: inline-block;
+        text-align: center;
+        width: 7rem;
+      }
+    }
+    &.imp90 {
+      text-align: end;
+      span {
+        display: inline-block;
+        text-align: center;
+        width: 8rem;
+      }
+    }
+  }
+  .imp50,
+  .imp90 {
+    text-align: end;
+  }
+}

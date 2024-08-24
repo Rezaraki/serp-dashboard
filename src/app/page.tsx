@@ -6,8 +6,16 @@ import { InfoItem } from "./components/core/info-item/InfoItem";
 import { KeywordTable } from "./components/core/keyword-table/KeywordTable";
 import { LinkType } from "./components/core/link-type/LinkType";
 import { MostVisited } from "./components/core/most-visited/MostVisited";
+import { PotentialTable } from "./components/core/potential-table/PotentialTable";
 import "./page.scss";
 
+const BarCHartData = [
+  { id: "1-3", value: 8 },
+  { id: "4-10", value: 12 },
+  { id: "11-20", value: 18 },
+  { id: "21-50", value: 38 },
+  { id: "50-100", value: 48 },
+];
 const MostVisitedData = [
   { address: "sdfkgjh", percent: 10 },
   { address: "sdfkgjh", percent: 10 },
@@ -87,11 +95,46 @@ const KeywordTableData = [
   },
 ];
 const InfoData = [
-  { heading: "Readability Score", progress: 25 },
-  { heading: "Lexical Richness", progress: 25 },
-  { heading: "Semantic Similarity Score", progress: 35 },
   { heading: "Keyword Coverage Score", progress: 7 },
+  { heading: "Semantic Similarity Score", progress: 35 },
+  { heading: "Lexical Richness", progress: 25 },
+  { heading: "Readability Score", progress: 25 },
 ];
+const potentialProps = {
+  heading: "پر پتانسیل ترین کیورد های ریاضی هفتم",
+  data: [
+    {
+      keyword: "کیورد تستی",
+      imp50: 595,
+      imp90: 999,
+      imp90Percent: 100,
+    },
+    {
+      keyword: "کیورد تستی",
+      imp50: 595,
+      imp90: 999,
+      imp90Percent: 100,
+    },
+    {
+      keyword: "کیورد تستی",
+      imp50: 999,
+      imp90: 555,
+      imp90Percent: -50,
+    },
+    {
+      keyword: "کیورد تستی",
+      imp50: 999,
+      imp90: 555,
+      imp90Percent: -50,
+    },
+    {
+      keyword: "کیورد تستی",
+      imp50: 999,
+      imp90: 555,
+      imp90Percent: -50,
+    },
+  ],
+};
 export default function Home() {
   return (
     <div className={`font-vazir`}>
@@ -110,7 +153,7 @@ export default function Home() {
         <div className="row">
           <div className="col pl-0 mb-3">
             <div className="p-3 border bg-light">
-              <BarChartBlock />
+              <BarChartBlock data={BarCHartData} />
             </div>
           </div>
           <div className="col pr-0 mb-3">
@@ -149,6 +192,19 @@ export default function Home() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="row">
+          <div className="col pl-0 mb-3">
+            <div className="p-3 border bg-light">
+              <PotentialTable {...potentialProps} />
+            </div>
+          </div>
+          <div className="col pr-0 mb-3">
+            <div className="p-3 border bg-light">
+              <PotentialTable {...potentialProps} />
+            </div>
+          </div>
         </div>
       </div>
     </div>
