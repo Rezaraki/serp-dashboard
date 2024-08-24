@@ -3,6 +3,7 @@ import ReactDataTable from "@/app/components/core/ReactDataTable";
 import BarChartBlock from "./components/core/bar-chart-block/BarChartBlock";
 import { MostVisited } from "./components/core/most-visited/MostVisited";
 import "./page.scss";
+import { LinkType } from "./components/core/link-type/LinkType";
 
 const MostVisitedData = [
   { address: "sdfkgjh", percent: 10 },
@@ -30,11 +31,24 @@ export default function Home() {
         order={[[1, "desc"]]}
         language={languages}
       />
-      <div className="home__second-row container-fluid mt-4">
+      <div className="home__blocks-container container-fluid mt-4">
         <div className="row">
           <div className="col pl-0 mb-3">
             <div className="p-3 border bg-light">
               <BarChartBlock />
+            </div>
+          </div>
+          <div className="col pr-0 mb-3">
+            <div className="p-3 border bg-light">
+              <MostVisited data={MostVisitedData} />
+            </div>
+          </div>
+        </div>
+
+        <div className="row">
+          <div className="col pl-0 mb-3">
+            <div className="p-3 border bg-light">
+              <LinkType form={32.5} frame={65.6} picture={65.5} text={24} />
             </div>
           </div>
           <div className="col pr-0 mb-3">

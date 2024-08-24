@@ -1,0 +1,15 @@
+.link-type {
+  height: 180px;
+  padding-top: 10px;
+  .row:first-of-type {
+    margin-bottom: 25px;
+  }
+}
+.link-type__item {
+  display: flex;
+  gap: 10px;
+}
+.link-type__type {
+  display: inline-block;
+  width: 35px;
+}
